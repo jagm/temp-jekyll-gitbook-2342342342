@@ -29,6 +29,15 @@
                 </div>
 
                 <div class="body-inner">
+                    
+                    <ul>
+                      {% for post in site.posts %}
+                        <li>
+                          <a href="{{ post.url }}">{{ post.title }}</a>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                    
                     {%- include body.html -%}
 
                     {% if reversed_posts %}
